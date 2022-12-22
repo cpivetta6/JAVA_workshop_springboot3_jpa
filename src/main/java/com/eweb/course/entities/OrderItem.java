@@ -22,8 +22,6 @@ public class OrderItem implements Serializable {
 	private double price;
 	
 	
-	
-	
 	public OrderItem( Order order, Product product, Integer quantity, double price) {
 		super();
 		id.setOrder(order);
@@ -74,6 +72,15 @@ public class OrderItem implements Serializable {
 	public void setPrice(double price) {
 		this.price = price;
 	}
+	
+	
+	//---------------------------#  SUBTOTAL OF A ORDERITEM
+	
+	public Double getSubTotal() {
+		return price * quantity;
+	}
+	
+	//---------------------------### HASHCODE AND EQUALS ###
 
 	@Override
 	public int hashCode() {
